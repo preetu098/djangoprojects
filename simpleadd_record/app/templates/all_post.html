@@ -1,0 +1,24 @@
+{% extends 'base.html'%}
+{%block content%}
+<div class="container">
+    <div class="text-center">
+        <h3>All Post</h3>
+    </div>
+    <h1>Posts</h1>
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Content</th>
+        <th>Publish Date</th>
+    </tr>
+    {%for x in post%}
+    <tr>
+        <td>{{x.title}}</td>
+        <td>{{x.content}}</td>
+        <td>{{x.pub_date}}</td>
+    </tr>
+    {%endfor%}
+</table>
+
+</div>
+{%endblock%}
